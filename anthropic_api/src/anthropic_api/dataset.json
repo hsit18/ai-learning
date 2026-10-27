@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Write a Python function that takes an S3 bucket name and a prefix string, then returns a list of all object keys matching that prefix using boto3.",
+    "format": "python",
+    "solution_criteria": "Uses boto3 S3 client or resource, correctly applies the Prefix parameter in list_objects_v2, handles pagination or at least retrieves the first page of results, and returns a list of key strings."
+  },
+  {
+    "task": "Create an IAM policy JSON document that allows a user to only list and get objects from a specific S3 bucket named 'my-secure-bucket', but explicitly denies the ability to delete any objects.",
+    "format": "json",
+    "solution_criteria": "Contains a valid IAM policy structure with Version and Statement fields, includes an Allow effect for s3:ListBucket and s3:GetObject on the specified bucket ARN, and includes an explicit Deny effect for s3:DeleteObject on the same bucket."
+  },
+  {
+    "task": "Write a regular expression that matches a valid Amazon Resource Name (ARN) for an AWS Lambda function, capturing the region, account ID, and function name as named groups.",
+    "format": "regex",
+    "solution_criteria": "Matches the pattern arn:aws:lambda:<region>:<account-id>:function:<function-name>, uses named capture groups for region, account_id, and function_name, correctly restricts the account ID to 12 digits, and does not match malformed ARNs."
+  }
+]
