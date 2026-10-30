@@ -119,6 +119,10 @@ dependencies = [
     "webencodings==0.6.1",
     "websocket-client==1.9.2",
     "widgetsnbextension==4.0.16",
+    "mcp[cli]>=1.8.0,<2",
+    "prompt-toolkit>=3.0.51",
+    "pytest>=9.2.0",
+    "markitdown[docx,pdf]>=0.1.9",
 ]
 
 [project.scripts]
