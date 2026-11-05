@@ -1,13 +1,6 @@
-from dotenv import load_dotenv
-from langchain_openrouter import ChatOpenRouter
+from langchain_app.models.openrouter import get_model
 
-load_dotenv()
+model = get_model()
 
-# The class automatically picks up OPENROUTER_API_KEY from the environment
-llm = ChatOpenRouter(
-    model="openai/gpt-4o",
-    temperature=0.7
-)
-
-response = llm.invoke("What is the capital of india?")
+response = model.invoke("What is the capital of india?")
 print(response)

@@ -1,15 +1,10 @@
-from langchain_openrouter import ChatOpenRouter
-from dotenv import load_dotenv
+from langchain_app.models.openrouter import get_model
 import streamlit as st
 from pathlib import Path
 from langchain_core.load import load
 import json
 
-load_dotenv()
-model = ChatOpenRouter(
-    model="openai/gpt-4o",
-    temperature=0.7
-)
+model = get_model()
 
 st.header('Reasearch Tool')
 
